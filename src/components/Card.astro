@@ -1,0 +1,114 @@
+---
+import illustration from '../assets/illustration-article.svg';
+import authorImage from '../assets/image-avatar.webp';
+---
+
+<main>
+  <img class="illustration" src={illustration.src} alt="Article illustration" height="200px">
+  <div class="content">
+    <div class="category">Learning</div>
+    <div class="publish-date">Published 21 Dec 2023</div>
+    <h1>HTML & CSS foundations</h1>
+    <p class="description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+  </div>
+  <div class="author">
+    <img src={authorImage.src} alt="Picture of Greg Hooper" height="32px" width="32px" />
+    <p>Greg Hooper</p>
+  </div>
+</main>
+
+<style>
+  main {
+    padding: 24px;
+    width: 279px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px 0 0 #000;
+
+    @media screen and (min-width: 1440px) {
+      width: 336px;
+    }
+  }
+
+  .illustration {
+    border-radius: 10px;
+    width: 100%;
+    object-position: center top;
+    object-fit: cover;
+
+    @media screen and (min-width: 1440px) {
+      object-position: left top;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .category {
+    padding: 4px 12px;
+    background: var(--yellow);
+    width: fit-content;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .publish-date {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.5;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 1.5em;
+    }
+  }
+
+  .description {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--gray-500);
+
+    @media screen and (min-width: 1440px) {
+      font-size: 1rem;
+    }
+  }
+
+  .author {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+  }
+</style>

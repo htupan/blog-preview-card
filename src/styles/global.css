@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree-VariableFont_wght.ttf');
+  font-weight: 500, 800;
+  font-style: auto;
+}
+
+:root {
+  --yellow: #f4d04e;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --white: #fff;
+}
+
+p,
+h1 {
+  margin: 0;
+}
